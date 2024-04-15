@@ -81,13 +81,12 @@ function moveStep() {
 
 // Call loadQuestions synchronously
 loadQuestions().then(() => {
-	console.log('Questions loaded:', Questions);
 	shuffle(Questions);
-	console.log(Questions);
-	loader.innerHTML = "تم تحميل البيانات بنجاح";
-	setTimeout(_=>{
+
+	loader.innerHTML = 'تم تحميل البيانات بنجاح';
+	setTimeout((_) => {
 		loader.style.top = '-100%';
-	},1000)
+	}, 1000);
 	// make a question structure
 	function MakeQuestion(qNum) {
 		// shuffle the Questions
@@ -144,11 +143,15 @@ loadQuestions().then(() => {
 	}
 
 	function clearAndRestartTimer() {
-		clearInterval(timer_int); // Clear the interval
-		timer_span.textContent = '10'; // Update display
-		setTimeout((_) => {
-			startTimer(10, timer_span); // Restart the timer after 1 second
-		}, 100);
+		if (counter < 9) {
+			clearInterval(timer_int); // Clear the interval
+			timer_span.textContent = '10'; // Update display
+			setTimeout((_) => {
+				startTimer(10, timer_span); // Restart the timer after 1 second
+			}, 100);
+		}else{
+			clearInterval(timer_int);
+		}
 	}
 
 	// make start quiz action (start game)
@@ -175,7 +178,6 @@ loadQuestions().then(() => {
 			playClickSound();
 
 			clearAndRestartTimer();
-
 			// if button text content == question.correctAnswer
 			if (e.target.textContent === Questions[counter].Correct_Answer) {
 				// added to correct answers
@@ -218,7 +220,6 @@ loadQuestions().then(() => {
 
 		start_screen.classList.remove('hide');
 		last.classList.add('hide');
-
 	}
 	try_.addEventListener('click', try_again);
 });

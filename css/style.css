@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+body {
+	font-family: 'Noto Kufi Arabic', sans-serif;
+	background-color: #23231a;
+}
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+button {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+/* container */
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+}
+@media (max-width: 576px) {
+	.container {
+		width: 100%;
+	}
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+	.container {
+		width: 540px; /* Adjust the width according to your preference */
+	}
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+	.container {
+		width: 720px; /* Adjust the width according to your preference */
+	}
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+	.container {
+		width: 960px; /* Adjust the width according to your preference */
+	}
+}
+
+@media (min-width: 1201px) {
+	.container {
+		width: 1140px; /* Adjust the width according to your preference */
+	}
+}
+
+/* making app */
+.app {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.app .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #322f20;
+	min-height: 600px;
+	height: 600px;
+	border-radius: 15px;
+	box-shadow: 0 10px 0 rgba(255, 255, 255, 1);
+	border: 3px solid #fff;
+}
+
+/* start */
+button#start_quiz,
+button#try_again {
+	font-size: 2rem;
+	padding: 15px 20px;
+	border-radius: 25px;
+	width: 50%;
+	background-color: #988f2a;
+	box-shadow: 0 10px 0 #000;
+	cursor: pointer;
+	color: #fff;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+button#start_quiz:active,
+button#try_again:active {
+	box-shadow: 0 5px 0 #000;
+}
+.mid {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	justify-content: space-around;
+}
+.mid .top {
+	width: 90%;
+	margin: 0 auto;
+}
+#time {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+	background-color: #6f6920;
+	box-shadow: 0 5px 0 #000;
+	width: 70px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	text-align: center;
+}
+#question {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 20px 0;
+	align-items: center;
+	color: #fff;
+}
+#question h1 {
+	width: 90%;
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+}
+#question button {
+	padding: 10px 20px;
+	border-radius: 40px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	box-shadow: 0 7px 0 #aaa;
+	font-family: inherit;
+	width: 50%;
+	transition: 300ms ease;
+}
+#question button:active {
+	box-shadow: 0 4px 0 #999;
+}
+#question > div {
+	display: flex;
+	gap: 0 20px;
+	width: 90%;
+}
+
+.steps {
+	display: flex;
+	justify-content: center;
+	gap: 0 10px;
+}
+
+.steps > p {
+	width: 40px;
+	height: 40px;
+	background-color: #988f2a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
+	color: #111;
+	border-radius: 5px;
+	font-weight: bold;
+	transition: 100ms ease;
+}
+
+.steps .active {
+	background-color: #4b3;
+	color: #fff;
+}
+
+.last_screen,
+.start_screen {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	gap: 30px 0;
+}
+.start_screen h1 {
+	color: #fff;
+	font-size: 2.3rem;
+}
+
+.hide {
+	display: none !important;
+}
+#summary {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 20px 0;
+	text-align: right;
+}
+#summary p {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+.svg-spinners--bars-scale {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='2.8' height='12' x='1' y='6' fill='%23000'%3E%3Canimate id='svgSpinnersBarsScale0' attributeName='y' begin='0;svgSpinnersBarsScale1.end-0.1s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='6;1;6'/%3E%3Canimate attributeName='height' begin='0;svgSpinnersBarsScale1.end-0.1s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='12;22;12'/%3E%3C/rect%3E%3Crect width='2.8' height='12' x='5.8' y='6' fill='%23000'%3E%3Canimate attributeName='y' begin='svgSpinnersBarsScale0.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='6;1;6'/%3E%3Canimate attributeName='height' begin='svgSpinnersBarsScale0.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='12;22;12'/%3E%3C/rect%3E%3Crect width='2.8' height='12' x='10.6' y='6' fill='%23000'%3E%3Canimate attributeName='y' begin='svgSpinnersBarsScale0.begin+0.2s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='6;1;6'/%3E%3Canimate attributeName='height' begin='svgSpinnersBarsScale0.begin+0.2s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='12;22;12'/%3E%3C/rect%3E%3Crect width='2.8' height='12' x='15.4' y='6' fill='%23000'%3E%3Canimate attributeName='y' begin='svgSpinnersBarsScale0.begin+0.3s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='6;1;6'/%3E%3Canimate attributeName='height' begin='svgSpinnersBarsScale0.begin+0.3s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='12;22;12'/%3E%3C/rect%3E%3Crect width='2.8' height='12' x='20.2' y='6' fill='%23000'%3E%3Canimate id='svgSpinnersBarsScale1' attributeName='y' begin='svgSpinnersBarsScale0.begin+0.4s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='6;1;6'/%3E%3Canimate attributeName='height' begin='svgSpinnersBarsScale0.begin+0.4s' calcMode='spline' dur='0.6s' keySplines='.36,.61,.3,.98;.36,.61,.3,.98' values='12;22;12'/%3E%3C/rect%3E%3C/svg%3E");
+	background-color: currentColor;
+	-webkit-mask-image: var(--svg);
+	mask-image: var(--svg);
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: 100% 100%;
+	mask-size: 100% 100%;
+  }
+.loader {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	background-color: #fff;
+	display: flex;
+	font-size: 2rem;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 10px;
+	gap: 0 10px;
+	align-items: center;
+	transition: 300ms ease;
+}

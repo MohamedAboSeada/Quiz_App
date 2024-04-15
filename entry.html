@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Questions Entry</title>
+		<link rel="stylesheet" href="css/entry.css" />
+	</head>
+	<body>
+        <div class="message">
+            Question added successfully !
+        </div>
+		<form id="add">
+			<div class="qTitle">
+				<label for="qtitle">Question Title</label>
+				<input
+					type="text"
+					name="Question_Title"
+					id="qtitle"
+					placeholder="Question Title"
+                    required
+				/>
+			</div>
+			<div class="qOptions">
+				<label>Question Options</label>
+				<input
+					type="text"
+					name="Option"
+					placeholder="option 1"
+					id="op1"
+                    required
+				/>
+				<input
+					type="text"
+					name="Option"
+					placeholder="option 2"
+					id="op2"
+                    required
+				/>
+				<input
+					type="text"
+					name="Option"
+					placeholder="option 3"
+					id="op3"
+                    required
+				/>
+				<input
+					type="text"
+					name="Option"
+					placeholder="option 4"
+					id="op4"
+                    required
+				/>
+			</div>
+			<div class="correct">
+				<label for="correctAns">Correct Answer</label>
+				<input
+					type="text"
+					name="Correct_Answer"
+					placeholder="Type correct answer"
+					id="correct_ans"
+                    required
+				/>
+			</div>
+			<input type="submit" value="Add Question" />
+		</form>
+		<script src="js/questions.js"></script>
+	</body>
+</html>

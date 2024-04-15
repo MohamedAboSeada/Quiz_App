@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Quiz</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- start app -->
+		<div class="app">
+			<div class="loader">
+				<p>جاري تحميل البيانات</p>
+				<div class="svg-spinners--bars-scale"></div>
+			</div>
+			<div class="container">
+				<!-- start quiz button -->
+				<div class="start_screen">
+					<h1>اختبار معلومات عامة 10 أسئلة</h1>
+					<button id="start_quiz">ابدأ الأختبار</button>
+				</div>
+				<!-- mid screen that contains score and timer and question -->
+				<div class="mid hide">
+					<div class="top">
+						<div id="time"><span id="timer">10</span></div>
+					</div>
+					<div id="question"></div>
+					<div class="steps">
+						<p class="active">1</p>
+						<p>2</p>
+						<p>3</p>
+						<p>4</p>
+						<p>5</p>
+						<p>6</p>
+						<p>7</p>
+						<p>8</p>
+						<p>9</p>
+						<p>10</p>
+					</div>
+				</div>
+
+				<!-- last screen that contains the number of wrong and correct questions -->
+				<!-- and try again button -->
+				<div class="last_screen hide">
+					<div id="summary">
+						<p> أجبت على : <span id="correct_answers"></span> صحيحة</p>
+						<p>أجبت على : <span id="wrong_answers"></span> خطأ</p>
+						<p>لم يتم الاجابة عليها : <span id="not_answered"></span> أسئلة</p>
+					</div>
+					<button id="try_again">حاول مره اخرى</button>
+				</div>
+			</div>
+		</div>
+		<!-- end app -->
+		<script src="js/main.js"></script>
+	</body>
+</html>
